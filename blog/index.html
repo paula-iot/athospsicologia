@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Blog — Athos Psicologia | Psicologia em Vila Madalena, Pinheiros e Pompeia</title>
+<title>Blog - Athos Psicologia | Psicologia em Vila Madalena, Pinheiros e Pompeia</title>
 <meta name="description" content="Artigos sobre psicoterapia, fenomenologia, ansiedade, avaliação psicológica e saúde mental. Athos Psicologia, ao lado do metrô Vila Madalena.">
 <link rel="canonical" href="https://athospsicologia.com/blog/">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:title" content="Blog — Athos Psicologia">
+<meta property="og:title" content="Blog - Athos Psicologia">
 <meta property="og:description" content="Artigos sobre psicoterapia, fenomenologia e saúde mental.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,7 +29,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 .wrap{max-width:var(--maxw);margin:0 auto;padding:0 32px}
 .eyebrow{font-size:.72rem;font-weight:600;letter-spacing:.2em;text-transform:uppercase;color:var(--sage-dp)}
 
-/* NAV (sempre sólida no blog) */
 .nav{position:fixed;inset:0 0 auto 0;z-index:60;padding:14px 0;background:rgba(251,251,249,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);color:var(--ink)}
 .nav__in{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo{font-family:var(--display);font-weight:600;font-size:.92rem;letter-spacing:.24em;text-transform:uppercase}
@@ -42,7 +41,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
 .burger span{width:24px;height:2px;background:currentColor;transition:.3s}
 
-/* Dropdown */
 .nav__menu{align-items:center}
 .nav__item{position:relative}
 .nav__item>a{display:inline-flex;align-items:center;gap:6px}
@@ -54,13 +52,11 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 .sub a{display:block;padding:10px 14px;border-radius:8px;color:var(--ink);opacity:1;font-size:.88rem;letter-spacing:0;text-transform:none;font-weight:500;transition:background .2s,color .2s}
 .sub a:hover{background:rgba(126,154,140,.12);color:var(--sage-dp)}
 
-/* MASTHEAD */
 .masthead{padding-top:150px;padding-bottom:40px}
 .masthead .eyebrow{margin-bottom:16px;display:block}
 .masthead h1{font-size:clamp(3rem,9vw,7rem);font-weight:500;letter-spacing:-.04em}
 .masthead p{color:var(--ink-2);font-size:1.1rem;max-width:520px;margin-top:20px}
 
-/* FEATURED */
 .feat{display:grid;grid-template-columns:1.2fr 1fr;gap:48px;align-items:center;padding-top:40px;padding-bottom:80px;border-bottom:1px solid var(--line)}
 .feat__img{aspect-ratio:16/11;border-radius:6px;background:linear-gradient(150deg,var(--sage),var(--ink));position:relative;overflow:hidden}
 .feat__img::after{content:"";position:absolute;inset:0;background:radial-gradient(70% 60% at 70% 20%,rgba(255,255,255,.16),transparent 70%)}
@@ -72,7 +68,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 .readmore:hover svg{transform:translateX(4px)}
 .meta{font-size:.82rem;color:var(--ink-2)}
 
-/* GRID */
 .posts{display:grid;grid-template-columns:repeat(3,1fr);gap:36px 28px;padding-top:70px;padding-bottom:100px}
 .post{cursor:pointer}
 .post__img{aspect-ratio:4/3;border-radius:6px;background:linear-gradient(150deg,var(--sage),var(--ink));position:relative;overflow:hidden;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
@@ -83,7 +78,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 .post p{color:var(--ink-2);font-size:.92rem;margin:10px 0}
 .note{background:rgba(126,154,140,.1);border:1px solid var(--line);border-radius:8px;padding:14px 18px;font-size:.86rem;color:var(--ink-2);margin:0 0 10px}
 
-/* FOOTER */
 .footer{padding:70px 0 34px;border-top:1px solid var(--line)}
 .footer__grid{display:grid;grid-template-columns:1.6fr 1fr 1fr;gap:40px;padding-bottom:44px}
 .footer .logo{font-size:1rem;margin-bottom:12px;display:inline-block}
@@ -103,7 +97,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 @media(max-width:820px){
   .nav__menu,.nav .pill{display:none}
   .burger{display:flex}
-  .nav__menu.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:rgba(251,251,249,.97);backdrop-filter:blur(14px);padding:18px 32px;gap:14px;box-shadow:0 20px 40px -24px rgba(0,0,0,.3)}
+  .nav__menu.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:rgba(251,251,249,.97);backdrop-filter:blur(14px);padding:18px 32px;gap:14px;box-shadow:0 20px 40px -24px rgba(0,0,0,.3);max-height:calc(100vh - 76px);max-height:calc(100dvh - 76px);overflow-y:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
   .nav__item{position:static}
   .nav__item>a{width:100%;justify-content:space-between}
   .sub{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:0;background:transparent;padding:6px 0 2px 14px;min-width:0;display:none;border-left:2px solid var(--line);border-radius:0;margin-left:4px}
@@ -121,12 +115,12 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 
 <nav class="nav" id="nav">
   <div class="wrap nav__in">
-    <a href="athos-prototipo-v2.html#top" class="logo">Athos Psicologia</a>
+    <a href="/" class="logo">Athos Psicologia</a>
     <div class="nav__menu" id="menu">
-      <a href="athos-prototipo-v2.html#top">Home</a>
-      <a href="athos-prototipo-v2.html#sobre">Sobre</a>
+      <a href="/">Home</a>
+      <a href="/#sobre">Sobre</a>
       <div class="nav__item has-sub">
-        <a href="athos-prototipo-v2.html#atendimentos" aria-haspopup="true" aria-expanded="false">Atendimentos
+        <a href="/#atendimentos" aria-haspopup="true" aria-expanded="false">Atendimentos
           <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </a>
         <div class="sub">
@@ -136,10 +130,12 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
           <a href="/avaliacao-psicologica/">Avaliação Psicológica</a>
           <a href="/assistencia-tecnica-psicologica/">Assistência Técnica Psicológica</a>
           <a href="/psicoterapia-para-expatriados/">Psicoterapia para Expatriados</a>
+          <a href="/orientacao-profissional/">Orientação Profissional</a>
+          <a href="/supervisao-para-psicologos/">Supervisão para Psicólogos</a>
         </div>
       </div>
       <div class="nav__item has-sub">
-        <a href="athos-prototipo-v2.html#abordagem" aria-haspopup="true" aria-expanded="false">Abordagens
+        <a href="/#abordagem" aria-haspopup="true" aria-expanded="false">Abordagens
           <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
         </a>
         <div class="sub">
@@ -147,11 +143,11 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
           <a href="/psicoterapia-psicanalitica/">Psicoterapia Psicanalítica</a>
         </div>
       </div>
-      <a href="athos-prototipo-v2.html#psicologa">Profissionais</a>
-      <a href="athos-prototipo-v2.html#contato">Contato</a>
-      <a href="athos-blog.html" aria-current="page">Blog</a>
+      <a href="/#psicologa">Profissionais</a>
+      <a href="/#contato">Contato</a>
+      <a href="/blog/" aria-current="page">Blog</a>
     </div>
-    <a class="pill" href="athos-prototipo-v2.html#contato">Agendar consulta</a>
+    <a class="pill" href="/#contato">Agendar consulta</a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
@@ -159,14 +155,13 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
 <header class="masthead wrap">
   <span class="eyebrow">Blog</span>
   <h1>Reflexões<br>sobre o cuidado</h1>
-  <p>Textos sobre psicoterapia, fenomenologia e saúde mental — no ritmo de quem quer entender melhor a própria experiência.</p>
+  <p>Textos sobre psicoterapia, fenomenologia e saúde mental - no ritmo de quem quer entender melhor a própria experiência.</p>
 </header>
 
 <div class="wrap">
-  <p class="note reveal">Conteúdo de demonstração — textos e imagens são espaços reservados, a serem substituídos pelos artigos reais.</p>
+  <p class="note reveal">Conteúdo de demonstração - textos e imagens são espaços reservados, a serem substituídos pelos artigos reais.</p>
 </div>
 
-<!-- FEATURED -->
 <section class="wrap feat">
   <div class="feat__img reveal"></div>
   <div class="reveal">
@@ -178,7 +173,6 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
   </div>
 </section>
 
-<!-- GRID -->
 <section class="wrap posts">
   <article class="post reveal" onclick="location.href='#'">
     <div class="post__img"></div>
@@ -233,23 +227,23 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.02;letter-spac
   <div class="wrap">
     <div class="footer__grid">
       <div>
-        <a href="athos-prototipo-v2.html#top" class="logo">Athos Psicologia</a>
+        <a href="/" class="logo">Athos Psicologia</a>
         <p style="max-width:320px;color:var(--ink-2);font-size:.92rem">Clínica de psicologia com atendimento presencial em Vila Madalena (SP) e Vila Galvão (Jundiaí), e online para todo o Brasil e exterior. Abordagem fenomenológico-existencial.</p>
       </div>
       <div>
         <h4>Navegação</h4>
-        <a href="athos-prototipo-v2.html#sobre">Sobre</a>
-        <a href="athos-prototipo-v2.html#atendimentos">Atendimentos</a>
-        <a href="athos-prototipo-v2.html#abordagem">Abordagem</a>
-        <a href="athos-prototipo-v2.html#psicologa">Psicólogas</a>
-        <a href="athos-blog.html">Blog</a>
+        <a href="/#sobre">Sobre</a>
+        <a href="/#atendimentos">Atendimentos</a>
+        <a href="/#abordagem">Abordagem</a>
+        <a href="/#psicologa">Psicólogas</a>
+        <a href="/blog/">Blog</a>
       </div>
       <div>
         <h4>Contato</h4>
         <a href="https://api.whatsapp.com/send?phone=5511994800142" target="_blank" rel="noopener">WhatsApp (11) 99480-0142</a>
         <a href="tel:+5511994800142">(11) 99480-0142</a>
-        <a href="athos-prototipo-v2.html#contato">Rua Paulistânia, 242 · conjunto 54</a>
-        <a href="athos-prototipo-v2.html#contato">Sumarezinho — São Paulo/SP</a>
+        <a href="/#contato">Rua Paulistânia, 242 · conjunto 54</a>
+        <a href="/#contato">Sumarezinho - São Paulo/SP</a>
       </div>
     </div>
     <div class="footer__btm">
