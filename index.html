@@ -10,14 +10,10 @@
 <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
 <meta name="author" content="Athos Psicologia">
 <meta name="content-language" content="pt-BR">
-
-<!-- Geo local (coordenadas aproximadas de Rua Paulistânia, 242 — confirmar com geocoding exato) -->
 <meta name="geo.region" content="BR-SP">
 <meta name="geo.placename" content="Sumarezinho, Vila Madalena, São Paulo">
 <meta name="geo.position" content="-23.54590;-46.68990">
 <meta name="ICBM" content="-23.54590, -46.68990">
-
-<!-- Open Graph -->
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:site_name" content="Athos Psicologia">
@@ -29,7 +25,6 @@
 <meta name="twitter:title" content="Athos Psicologia | Psicólogas em Vila Madalena, Pinheiros e Pompeia">
 <meta name="twitter:description" content="Clínica de psicologia ao lado do metrô Vila Madalena, atendendo Vila Madalena, Pinheiros e Pompeia.">
 
-<!-- Dados estruturados (JSON-LD) -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -95,17 +90,14 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-/* ============================================================
-   ATHOS PSICOLOGIA — PROTÓTIPO v2 (editorial / cinematográfico)
-   ============================================================ */
 :root{
-  --ink:      #16211E;   /* quase-preto esverdeado — tipografia */
-  --ink-2:    #5A6862;   /* texto secundário */
-  --paper:    #FBFBF9;   /* fundo claro editorial */
-  --line:     #E4E7E3;   /* filetes */
-  --sage:     #7E9A8C;   /* verde de apoio */
+  --ink:      #16211E;   
+  --ink-2:    #5A6862;  
+  --paper:    #FBFBF9;   
+  --line:     #E4E7E3;  
+  --sage:     #7E9A8C;   
   --sage-dp:  #52705F;
-  --warm:     #D98E6F;   /* acento quente — mínimo */
+  --warm:     #D98E6F;   
 
   --display: "Inter Tight", system-ui, sans-serif;
   --body:    "Inter", system-ui, -apple-system, sans-serif;
@@ -125,7 +117,7 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1;letter-spacing
 .nav.solid{background:rgba(251,251,249,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);color:var(--ink);padding:14px 0}
 .nav__in{display:flex;align-items:center;justify-content:space-between;gap:20px}
 .logo{font-family:var(--display);font-weight:600;font-size:.92rem;letter-spacing:.24em;text-transform:uppercase}
-.nav__menu{display:flex;gap:30px}
+.nav__menu{display:flex;gap:30px;align-items:center}
 .nav__menu a{font-size:.82rem;letter-spacing:.12em;text-transform:uppercase;opacity:.85;transition:opacity .25s}
 .nav__menu a:hover{opacity:1}
 .pill{border:1px solid currentColor;border-radius:999px;padding:.6em 1.3em;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;transition:background .3s,color .3s}
@@ -134,6 +126,17 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1;letter-spacing
 .nav.solid .pill:hover{background:var(--ink);color:#fff}
 .burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:6px}
 .burger span{width:24px;height:2px;background:currentColor;transition:.3s}
+
+/* ---------- Dropdown ---------- */
+.nav__item{position:relative}
+.nav__item>a{display:inline-flex;align-items:center;gap:6px}
+.chev{transition:transform .3s;flex:none}
+.has-sub:hover>a .chev,.has-sub.open>a .chev,.has-sub:focus-within>a .chev{transform:rotate(180deg)}
+.sub{position:absolute;top:calc(100% + 14px);left:50%;transform:translate(-50%,10px);min-width:264px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:8px;box-shadow:0 26px 54px -22px rgba(22,33,30,.4);opacity:0;visibility:hidden;transition:opacity .25s,transform .25s,visibility 0s .25s;z-index:65}
+.sub::before{content:"";position:absolute;top:-14px;left:0;right:0;height:14px}
+.has-sub:hover .sub,.has-sub:focus-within .sub,.has-sub.open .sub{opacity:1;visibility:visible;transform:translate(-50%,0);transition:opacity .25s,transform .25s,visibility 0s 0s}
+.sub a{display:block;padding:10px 14px;border-radius:8px;color:var(--ink);opacity:1;font-size:.88rem;letter-spacing:0;text-transform:none;font-weight:500;transition:background .2s,color .2s}
+.sub a:hover{background:rgba(126,154,140,.12);color:var(--sage-dp)}
 
 /* ---------- HERO ---------- */
 .hero{position:relative;height:100svh;min-height:640px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;color:#fff}
@@ -248,8 +251,13 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1;letter-spacing
 @media(max-width:820px){
   .nav__menu,.nav .pill{display:none}
   .burger{display:flex}
-  .nav__menu.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;background:rgba(251,251,249,.97);backdrop-filter:blur(14px);padding:18px 32px;gap:14px;box-shadow:0 20px 40px -24px rgba(0,0,0,.3)}
+  .nav__menu.open{display:flex;position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;background:rgba(251,251,249,.97);backdrop-filter:blur(14px);padding:18px 32px;gap:14px;box-shadow:0 20px 40px -24px rgba(0,0,0,.3)}
   .nav__menu.open a{color:var(--ink);opacity:1}
+  .nav__item{position:static}
+  .nav__item>a{width:100%;justify-content:space-between}
+  .sub{position:static;transform:none;opacity:1;visibility:visible;box-shadow:none;border:0;background:transparent;padding:6px 0 2px 14px;min-width:0;display:none;border-left:2px solid var(--line);border-radius:0;margin-left:4px}
+  .has-sub.open .sub{display:block}
+  .sub a{color:var(--ink-2);padding:8px 10px}
   .sobre,.cols,.pro,.unit,.footer__grid{grid-template-columns:1fr}
   .pro + .pro{margin-top:64px}
   .pro__ph{aspect-ratio:4/3;max-height:420px}
@@ -287,11 +295,33 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1;letter-spacing
   <div class="wrap nav__in">
     <a href="#top" class="logo">Athos Psicologia</a>
     <div class="nav__menu" id="menu">
+      <a href="#top">Home</a>
       <a href="#sobre">Sobre</a>
-      <a href="#atendimentos">Atendimentos</a>
-      <a href="#abordagem">Abordagem</a>
-      <a href="athos-blog.html">Blog</a>
+      <div class="nav__item has-sub">
+        <a href="#atendimentos" aria-haspopup="true" aria-expanded="false">Atendimentos
+          <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="sub">
+          <a href="/psicoterapia/">Psicoterapia</a>
+          <a href="/psicoterapia-online/">Psicoterapia Online</a>
+          <a href="/psicoterapia-para-casais/">Psicoterapia para Casais</a>
+          <a href="/avaliacao-psicologica/">Avaliação Psicológica</a>
+          <a href="/assistencia-tecnica-psicologica/">Assistência Técnica Psicológica</a>
+          <a href="/psicoterapia-para-expatriados/">Psicoterapia para Expatriados</a>
+        </div>
+      </div>
+      <div class="nav__item has-sub">
+        <a href="#abordagem" aria-haspopup="true" aria-expanded="false">Abordagens
+          <svg class="chev" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>
+        </a>
+        <div class="sub">
+          <a href="/abordagem-fenomenologica-existencial/">Abordagem Fenomenológica-existencial</a>
+          <a href="/psicoterapia-psicanalitica/">Psicoterapia Psicanalítica</a>
+        </div>
+      </div>
+      <a href="#psicologa">Profissionais</a>
       <a href="#contato">Contato</a>
+      <a href="athos-blog.html">Blog</a>
     </div>
     <a class="pill" href="#contato">Agendar consulta</a>
     <button class="burger" id="burger" aria-label="Menu"><span></span><span></span><span></span></button>
@@ -487,8 +517,8 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1;letter-spacing
         <h4>Navegação</h4>
         <a href="#sobre">Sobre</a>
         <a href="#atendimentos">Atendimentos</a>
-        <a href="#abordagem">Abordagem</a>
-        <a href="#psicologa">Psicólogas</a>
+        <a href="/abordagem-fenomenologica-existencial/">Abordagens</a>
+        <a href="#psicologa">Profissionais</a>
         <a href="athos-blog.html">Blog</a>
       </div>
       <div>
@@ -511,15 +541,24 @@ h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1;letter-spacing
 </a>
 
 <script>
-// Nav sólida ao rolar (após o hero)
 const nav=document.getElementById('nav'),hero=document.getElementById('top');
 const io0=new IntersectionObserver(([e])=>nav.classList.toggle('solid',!e.isIntersecting),{rootMargin:'-80px 0px 0px 0px'});
 io0.observe(hero);
 
-// Menu mobile
 const burger=document.getElementById('burger'),menu=document.getElementById('menu');
 burger.addEventListener('click',()=>menu.classList.toggle('open'));
-menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',e=>{
+  const p=a.parentElement;
+  if(p.classList.contains('has-sub') && matchMedia('(max-width:820px)').matches){
+    e.preventDefault();
+    menu.querySelectorAll('.has-sub.open').forEach(o=>{if(o!==p){o.classList.remove('open');o.querySelector('a').setAttribute('aria-expanded','false')}});
+    p.classList.toggle('open');
+    a.setAttribute('aria-expanded', p.classList.contains('open'));
+    return;
+  }
+  menu.classList.remove('open');
+}));
 
 // Reveal
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
